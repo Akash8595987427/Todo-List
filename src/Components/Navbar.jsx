@@ -5,9 +5,9 @@ const Navbar=()=>{
     return(
         <>
         
-        <div className="container bg-blue-600 text-white w-full h-14 flex justify-around items-center text-lg ">
+        <div className="container bg-[#2b7fed] text-white w-full h-14 flex justify-around items-center text-lg ">
             
-            <div className="navbar_left">iTask Manager</div>
+            <div className="navbar_left text-3xl">iTask Manager</div>
             
         </div>
 

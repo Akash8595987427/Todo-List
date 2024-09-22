@@ -33,11 +33,14 @@ const Todo=()=>{
         setArray(updateArray);
     }
 
+    const handleClick=(e)=>{
+        console.log(e.target);
+    }
 
- 
 
 
     return (
+
         <>
             <div className="container w-full mt-12 flex justify-center items-center ">
                 <div className="todo_container w-[40%] h-[90%] p-4 bg-blue-100 flex flex-col justify-center items-center gap-4 rounded-lg">
@@ -47,7 +50,7 @@ const Todo=()=>{
                     <div className="todo_container_btn w-full flex flex-col justify-center gap-4">
 
                         <div className="input_text w-full h-9 flex gap-4">
-                        <input onChange={()=>{ handleChange(event)}} value={todo}  type="text" className="w-full px-6 border-solid border-2 rounded-xl border-black "  />
+                        <input placeholder="Enter the item here " onChange={()=>{ handleChange(event)}} value={todo}  type="text" className="w-full px-6 border-solid border-2 rounded-xl border-black "  />
                         <button onClick={handleSave} className=" bg-blue-800 text-white rounded-xl p-4 flex justify-center items-center hover:bg-green-600 hover:text-white">Save</button>
                         </div>
                         
@@ -61,7 +64,7 @@ const Todo=()=>{
                         array.map((elem, index)=>{
                             
                             return(
-                                <div className="w-full flex justify-between">
+                                <div className="w-full flex justify-between " onClick={handleClick}>
                                 <p> {elem} </p>
                                 <div className="todo_btn">
                                     {/* <button onClick={()=>{handleDone(elem)}} className="mx-3 bg-blue-800 text-white rounded-xl py-1 px-1.5 text-sm">Done</button> */}
